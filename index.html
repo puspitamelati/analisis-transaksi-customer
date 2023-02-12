@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+
+    <py-env>
+        -pandas
+        -altair
+    </py-env>
+
+    <title>Analisis Transaksi Konsumen</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Analisis Transaksi Konsumen</h2>
+
+        <p align="justify">Para penjual tentu sering dihadapkan pada pilihan keputusan untuk mengoptimalkan penjualan.
+            Pengambilan keputusan yang keliru bukan hanya menjauhkan penjual dari target penjualan namun pemborosan
+            waktu dan juga uang. Urgensi
+            dari
+            pengambilan keputusan yang tepat untuk diambil penjual maka perlu melalakukan analisis dengan basis data
+            yang tepat.
+            Histori atau riwayat dari data transaksi konsumen dari platform jual-beli online bisa menjadi sumber
+            informasi yang
+            berguna untuk digunakan oleh penjual untuk melakukan analisnya terhadap prilaku pembelian dari konsumen.
+            </br>
+            Salah satu upaya dari stategi penjualan dan pemasaran adalah menarik konsumen baru dan mempertahankan
+            konsumen yang
+            sudah ada. Beragam faktor yang mempengaruhi pola pembelian dari konsumen bisa dicari melalui data histori
+            transaksi
+            konsumen. Beragam faktor seperti harga, review produk, dan review dari pelayanan bisa mempengaruhi pembelian
+            konsumen.
+            Prilaku dari konsumen dari riwayat penjualan pun dapat dilihat dari pembelian berulang, review yang
+            diberikan, dan
+            jumlah order dan barang yang sering dibeli setiap kali pembelian.</br>
+            Untuk menganalisis pola prilaku konsumen dan beragam pengaruhnya, terdapat objektif dari analisis yang akan
+            dilakukan
+            terhadap riwayat transaksi konsumen.<br>
+        <ul style="list-style-type : circle">
+            <li>Melihat bagaimana pertumbuhan konsumen dan banyak transaksi yang dialkuakan serta review yang diberikan
+            </li>
+            <li>Melihat karakter pembelian konsumen</li>
+            <li>melihat pengaruh kecepatan pengiriman dan pengemasan barang terhadap rating pembelian</li>
+            <li>produk yang banyak dibeli dan memberikan penghasilan terbanyak</li>
+        </ul>
+        </p>
+
+        <h4>Summary</h4>
+        <hr>
+        <p align="justify"> Data transaksi dari tahun 2016 terhadap pertumbuhan konsumen dan banyaknya transaksi
+            menunjukan kenaikan.
+            Walaupun kenaikan tidak konsisten dan mengalami naik turun, namun trend dari data menunjukkan kenaikan.
+            Untuk nilai dari rating
+            yang diberikan oleh konsumen menunjukkan rating paling banyak ada di angka 4
+            <img src="./pic/1.png">
+        </p>
+
+        <h4>Analisis Konsumen</h4>
+        <hr>
+        <p align="justify"> Analisis konsumen dilakukan untuk melihat pola pembeliannya. Seperti kapan kali terakhir
+            konseumen datang,
+            seberapa sering konsumen membeli produk dan berapa uang yang sudah diberikan konsumen kepada penjual. Dari
+            analisis data transaksi
+            menunjukkan semua konsumen yang ada merupakan konsumen baru. Tidak ada konsumen yang melakukan lebih dari
+            satu kali transaksi.
+            <img src="./pic/4.png">
+            Apabila dilihat dari grafik di atas konsumen baru cenderung untuk membeli barang dengan jenis item dan total
+            item yang tidak banyak.
+            Kebanyakan hanya membeli satu jenis barang dengan satu pembelian. Namun memang harga yang dikeluarkan untuk
+            barang tersebut beragam.
+            Untuk Nilai moneter konsumen atau uang yang dikeluarkan konsumen kebanyakan masih di bawah $200.
+        </p>
+        <h4>Pengaruh Performa Penjual</h4>
+        <hr>
+        <p align="'justify"> karena tidak ada pembelian berulang yang artinya semua konsumen adalan konsumen baru. Di
+            sini saya ingin
+            melihat bagaimana performan dari penjual dalam melayani konsumen dapat memberikan pengaruh terhadap
+            penilaian konsumen.
+            poin yang akan saya lihat adalah kecepatan pengemasan barang dan kecepatan pengiriman. Kecepatan pengemasan
+            dapat dilihat dari
+            waktu yang diperlukan oleh penjual mulai dari pesanan telah terverifikasi sampai barang dikirim. Kecepatan
+            pengiriman tentu tergantung Dari
+            lokasi penjual dan pembeli. oleh karena itu untuk melihat kecepatan pengiriman akan dilihat dari selisihnya
+            estimasi pengiriman dan waktu real yang diperlukan dalam
+            pengiriman barangnya.<br>
+            <img src="./pic/3.png"> <br>
+            Terlihat dari grafik kecepatan pengiriman, apabila selisih dari estimasi ke arah positif, artinya pesanan
+            datang lebih cepat, maka rating dari konsumen semakin
+            baik. Artinya ada pengaruh dari kecepatan pengiriman terhadap rating yang diberikan konsumen. Untuk yang
+            bernilai negatif artinya lebih lama dari estimasi
+            pengiriman maka nilai rating konsumen malah turun dan nilanya dibawah 3,5.<br>
+            Pada kecepatan pengemasan barang, banyak faktor yang dipertimbangkan karena dimensi dan bobot dari barang
+            yang dipesan beragam sehingga pengemasan pun bergantung pada faktor-faktor tersebut.
+            Untuk barang dengan dimensi yang besar walaupun kecepatan pengemasan lama, konsumen masih memberi rating
+            yang bagus. Tapi barang dengan dimensi yang kecil, lamanya kecepatan pengemasan sangat mempengaruhi rating
+            dari konsumen.
+        </p>
+
+        <h4>Top Produk</h4>
+        <hr>
+        <p align="center">Pembelian konsumen terhadap barang tertentu bisa menjadi pertimbangan produk mana yang lebih
+            laku di pasaran dan menghasilkan benyak keuntungan pada penjual dibandingkan barang lainnya. Berikut ini
+            adalah sepuluh produk dengan penjualan terbaik berdasarkan histori transaksi konsumen.
+            <img src="./pic/5.png" </p>
+
+
+
+    </div>
+    <py-script output="summary" src="./script/summary.py"></py-script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.js"></script>
+</body>
+
+</html>
